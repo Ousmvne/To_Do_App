@@ -61,6 +61,34 @@ export default class CustomModal extends Component {
                 placeholder="Enter Todo description"
               />
             </FormGroup>
+            <FormGroup>
+              <Label for="todo-difficulty">Difficulty</Label>
+              <Input
+                type="select"
+                id="todo-difficulty"
+                name="difficulty"
+                value={this.state.activeItem.difficulty}
+                onChange={this.handleChange}
+              >
+                <option value="Facile">Facile</option>
+                <option value="Moyen">Moyen</option>
+                <option value="Difficile">Difficile</option>
+              </Input>
+            </FormGroup>
+            <FormGroup>
+              <Label for="todo-category">Category</Label>
+              <Input
+                type="select"
+                id="todo-category"
+                name="category"
+                value={this.state.activeItem.category}
+                onChange={this.handleChange}
+              >
+                <option value="Personal">Personal</option>
+                <option value="Leisure">Leisure</option>
+                <option value="Work">Work</option>
+              </Input>
+            </FormGroup>
             <FormGroup check>
               <Label check>
                 <Input

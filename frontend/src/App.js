@@ -13,6 +13,8 @@ class App extends Component {
         title: "",
         description: "",
         completed: false,
+        difficulty: "Moyen",  // Ajout du champ difficulty
+        category: "Personal", // Ajout du champ category
       },
     };
   }
@@ -53,7 +55,13 @@ class App extends Component {
   };
 
   createItem = () => {
-    const item = { title: "", description: "", completed: false };
+    const item = {
+      title: "",
+      description: "",
+      completed: false,
+      difficulty: "Moyen",  // Initialiser avec la valeur par défaut
+      category: "Personal", // Initialiser avec la valeur par défaut
+    };
 
     this.setState({ activeItem: item, modal: !this.state.modal });
   };
@@ -106,7 +114,7 @@ class App extends Component {
           }`}
           title={item.description}
         >
-          {item.title}
+          {item.title} - {item.difficulty} - {item.category} {/* Afficher difficulté et catégorie */}
         </span>
         <span>
           <button
